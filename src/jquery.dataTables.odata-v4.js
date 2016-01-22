@@ -4,7 +4,7 @@ DATATABLES ODATA V4 ADDON
 --------------------------------------------------------------------------
 Enables jQuery DataTables to read data from an OData service
 
-Version: 1.0.0
+Version: 1.0.1
 Author: Michele Bersini
 Copyright 2016 Michele Bersini, all rights reserved.
 
@@ -94,9 +94,18 @@ function ajaxOData(data, callback, settings) {
                 case "num":
                 case "numeric":
                 case "number":
-                    var parseValue = function (val) { return Globalize.parseFloat(val); };
-                    if (columnType === "date")
-                        parseValue = function (val) { return (new Globalize.parseDate(val)).toISOString(); };
+                    var parseValue = function(val) {
+                        var f = Globalize.parseFloat(val);
+                        if (isNaN(f)) return null;
+                        return f;
+                    }
+                    if (columnType === "date") {
+                        parseValue = function(val) {
+                            var d = Globalize.parseDate(val) || Globalize.parseDate(value, Globalize.formars)
+                            if (!d) return null;
+                            return d.toISOString();
+                        }
+                    }
 
                     var processRange = function (val) {
                         var result = "";
