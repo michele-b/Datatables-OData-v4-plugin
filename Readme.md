@@ -5,4 +5,4 @@ Enables jQuery DataTables to read data from an OData service
 Michele Bersini
 
 ##Copyright and license
-Copyright 2016 Michele Bersini under the MIT license. All rights reserved.
+Copyright 2016 Michele Bersini under  [the MIT license](LICENSE).
