@@ -5,6 +5,7 @@ Version: 1.0.0
 Author: Michele Bersini
 Copyright 2016 Michele Bersini, all rights reserved.
 
+# License
 This source file is free software, licensed under 
 MIT license (http://datatables.net/license/mit)
 
