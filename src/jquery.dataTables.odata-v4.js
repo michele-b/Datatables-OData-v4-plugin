@@ -101,7 +101,7 @@ function ajaxOData(data, callback, settings) {
                     }
                     if (columnType === "date") {
                         parseValue = function(val) {
-                            var d = Globalize.parseDate(val) || Globalize.parseDate(value, Globalize.formars)
+                            var d = Globalize.parseDate(val);
                             if (!d) return null;
                             return d.toISOString();
                         }
