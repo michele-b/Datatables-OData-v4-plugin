@@ -8,7 +8,7 @@ $('table#people').dataTable({
     "oDataUrl": "/odata/People",
   	"oDataViaJsonp": false,	// set to true for cross-domain requests
     "ajax": ajaxOData,
-    "serverSide": true,
+    "serverSide": true, // set to true for OData server side filtering and sorting 
     "columns": [
       { data: "Id", type: "num" },
       { data: "Name" },
@@ -19,14 +19,12 @@ $('table#people').dataTable({
 });
 ```
 
-When serverSide is set to true filtering and sorting are also performed via OData
-
 ### Notes
 * Type for numeric and date columns must be set in the right way
-* JQuery Globalize is a prerequisite
+* JQuery Globalize is required
 
 ##Author
-Michele Bersini
+Michele Bersini, inspired from Vida Popovic OData connector (Thanks)
 
 ##Copyright and license
-Copyright 2016 Michele Bersini under  [the MIT license](LICENSE).
+Copyright 2016 Michele Bersini under [the MIT license](https://opensource.org/licenses/MIT).
