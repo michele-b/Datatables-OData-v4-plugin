@@ -1,5 +1,13 @@
 #Datatables-OData-v4-plugin
-Enables jQuery DataTables to read and display data from an OData service
+Enables jQuery DataTables to read and display data from an OData service.
+It support server-side operations like:
+* Pagination
+* Sorting
+* Global and column filtering
+* Numeric, date and string types
+* Range filter for numeric and date types
+* V4 OData support (only)
+* JSONP requests
 
 ## How to use
 
