@@ -1,5 +1,5 @@
-#Datatables-OData-v4-addon
-Enables jQuery DataTables to read data from an OData service
+#Datatables-OData-v4-plugin
+Enables jQuery DataTables to read and display data from an OData service
 
 ## How to use
 
