@@ -21,7 +21,7 @@ $('table#people').dataTable({
       { data: "Id", type: "num" },
       { data: "Name" },
       { data: "Surname" },
-      { data: "BithPlace" },
+      { data: "BirthPlace" },
       { data: "BirthDate", type: "date" }
   	],
 });
