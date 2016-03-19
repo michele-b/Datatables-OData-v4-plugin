@@ -15,6 +15,7 @@ It support server-side operations like:
 $('table#people').dataTable({
     "oDataUrl": "/odata/People",
   	"oDataViaJsonp": false,	// set to true for cross-domain requests
+    "oDataAbort": false, // set to true to cancel previous on-going request
     "ajax": ajaxOData,
     "serverSide": true, // set to true for OData server side filtering and sorting 
     "columns": [
