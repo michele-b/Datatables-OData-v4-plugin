@@ -176,8 +176,14 @@ function ajaxOData(data, callback, settings) {
     }
 
 
+    if (settings.oInit.oAbort) {
+		    if (settings.jqXHR && settings.jqXHR.readystate != 4) {
+            settings.jqXHR.abort();
+        }
+	  }
 
-    var jqXHR = $.ajax(jQuery.extend({}, settings.oInit.ajax, {
+
+    $.ajax(jQuery.extend({}, settings.oInit.ajax, {
         "url": settings.oInit.oDataUrl,
         "data": request,
         "jsonp": oDataViaJsonp,
@@ -206,6 +212,4 @@ function ajaxOData(data, callback, settings) {
             callback(dataSource);
         }
     }));
-    
-    return jqXHR;
 };
