@@ -30,10 +30,10 @@ $('table#people').dataTable({
 
 ### Notes
 * Type for numeric and date columns must be set in the right way
-* JQuery Globalize is required
+* JQuery Globalize is optionally used for number and date parsing
 
-##Author
+## Author
 Michele Bersini, inspired from Vida Popovic OData connector (Thanks)
 
-##Copyright and license
+## Copyright and license
 Copyright 2016 Michele Bersini under [the MIT license](https://opensource.org/licenses/MIT).
