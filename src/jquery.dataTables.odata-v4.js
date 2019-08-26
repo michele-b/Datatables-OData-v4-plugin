@@ -175,7 +175,7 @@ function ajaxOData(data, callback, settings) {
         }
     }
 
-    if (settings.oInit.oAbort) {
+    if (settings.oInit.oDataAbort) {
         if (settings.jqXHR && settings.jqXHR.readystate != 4) {
             settings.jqXHR.abort();
         }
@@ -212,6 +212,7 @@ function ajaxOData(data, callback, settings) {
         "error": function (jqXHR, textStatus, errorThrown) {
         	settings.oApi._fnCallbackFire(settings, null, 'xhr', [settings, null, settings.jqXHR]);
         	settings.oApi._fnProcessingDisplay(settings, false);
+        	settings.oApi._fnLog(settings, 0, "Error while loading data: " + textStatus + " - " + errorThrown);
         }
     }));
     
